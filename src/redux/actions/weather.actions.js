@@ -8,7 +8,7 @@ export const fetchWeather = async (dispatch, cityName, enqueueSnackbar) => {
     const optionsCities = {
       method: "GET",
       cors: true,
-      url: "https://dataservice.accuweather.com/locations/v1/cities/search",
+      url: "https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/locations/v1/cities/search",
       params: { q: cityName, apikey: "QIImPUoeGQGPhLqABhS5CLuxCRIFGW76" },
     };
 
@@ -17,7 +17,7 @@ export const fetchWeather = async (dispatch, cityName, enqueueSnackbar) => {
     const optionsWeather = {
       method: "GET",
       cors: true,
-      url: `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${responseCity.data[0].Key}`,
+      url: `https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/forecasts/v1/daily/5day/${responseCity.data[0].Key}`,
       params: { apikey: "QIImPUoeGQGPhLqABhS5CLuxCRIFGW76" },
     };
     const responseWeather = await axios.request(optionsWeather);
