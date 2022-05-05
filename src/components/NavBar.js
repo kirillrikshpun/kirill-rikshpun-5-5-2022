@@ -24,7 +24,7 @@ function NavBar({ mode, setMode }) {
               <Link
                 style={{ textDecoration: "none", color: "white" }}
                 onClick={() => dispatch(setWeather({}))}
-                to="/"
+                to="kirill-rikshpun-5-5-2022/"
               >
                 home
               </Link>
@@ -35,7 +35,7 @@ function NavBar({ mode, setMode }) {
             >
               <Link
                 style={{ textDecoration: "none", color: "white" }}
-                to="/favorite"
+                to="kirill-rikshpun-5-5-2022/favorite"
               >
                 favorite
               </Link>
