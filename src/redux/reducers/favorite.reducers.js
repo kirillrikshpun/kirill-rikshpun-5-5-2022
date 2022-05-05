@@ -38,7 +38,7 @@ export default function reducer(state = initialState, { type, payload }) {
     case REMOVE_FROM_FAVORITE:
       return {
         ...state,
-        favorite: state.favorite.filter((elem) => elem.key != payload.key),
+        favorite: state.favorite.filter((elem) => elem.key !== payload.key),
       };
 
     case SELECT_FAVOURITE:
